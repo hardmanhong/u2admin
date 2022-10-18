@@ -1,0 +1,24 @@
+{
+  "name": "u2admin",
+  "version": "0.0.1",
+  "description": "基于 React + Typescript + antd 的后台模板",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardmanhong/u2admin.git"
+  },
+  "keywords": [
+    "react",
+    "admin",
+    "template"
+  ],
+  "author": "goandup@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hardmanhong/u2admin/issues"
+  },
+  "homepage": "https://github.com/hardmanhong/u2admin#readme"
+}
