@@ -17,14 +17,15 @@
   "semi": false,
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
-    "^react$",
+    "^react",
+    "<THIRD_PARTY_MODULES>",
     "^@/components$",
     "^@/hoc$",
     "^@/hooks$",
     "^@/provider$",
     "^@/utils$",
-    "<THIRD_PARTY_MODULES>",
     "api$",
+    "./(types|interface).ts$",
     ".(scss|less|css)$"
   ],
   "importOrderSortSpecifiers": true

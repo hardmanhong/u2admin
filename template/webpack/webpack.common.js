@@ -1,7 +1,7 @@
-const paths = require('./paths');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const isDev = process.env.NODE_ENV === 'development';
+const paths = require('./paths')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
   entry: {
@@ -25,9 +25,13 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.(css|less)/,
+        test: /.(jpe?g|png|gif|svg)$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'less-loader']
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'static/media/[name].[hash:8].[ext]'
+        }
       }
     ]
   },
@@ -39,8 +43,8 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@/src': path.resolve('./src')
+      '@': paths.src
     }
   }
-};
-module.exports = config;
+}
+module.exports = config
