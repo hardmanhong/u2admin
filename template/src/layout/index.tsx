@@ -34,6 +34,11 @@ const U2Layout: React.FC<IProps> = () => {
                 name: 'test-detail',
                 icon: <HomeOutlined />,
                 path: '/test/2'
+              },
+              {
+                name: 'test-record',
+                icon: <HomeOutlined />,
+                path: '/test/record'
               }
             ]}
           />

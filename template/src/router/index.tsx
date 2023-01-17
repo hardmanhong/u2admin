@@ -10,6 +10,7 @@ import { ErrorBoundary, Loading, Permission } from '@/components'
 // 需要懒加载的页面组件
 const Home = lazy(() => import('../pages/home'))
 const TestList = lazy(() => import('../pages/test/list'))
+const TestRecord = lazy(() => import('../pages/test/record'))
 const TestDetail = lazy(() => import('../pages/test/detail'))
 
 /**
@@ -90,6 +91,10 @@ const routerConfig: RouteObject[] = [
           {
             path: '',
             element: LazyLoad(TestList, 'test-list')
+          },
+          {
+            path: 'record',
+            element: LazyLoad(TestRecord, 'test-record')
           },
           {
             path: ':id',
