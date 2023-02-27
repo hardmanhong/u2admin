@@ -1,11 +1,12 @@
 import { Suspense, lazy } from 'react'
-import { Navigate, createBrowserRouter } from 'react-router-dom'
 import type { RouteObject } from 'react-router-dom'
-// 不需要懒加载的页面组件
-import Layout from '../layout'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
+import { ErrorBoundary, Loading, Permission } from '@/components'
 import Login from '@/pages/login'
 import NotFound from '@/pages/not-found'
-import { ErrorBoundary, Loading, Permission } from '@/components'
+import Layout from '../layout'
+
+// 不需要懒加载的页面组件
 
 // 需要懒加载的页面组件
 const Home = lazy(() => import('../pages/home'))

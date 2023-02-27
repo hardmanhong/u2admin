@@ -1,3 +1,5 @@
+import { IProvider } from './types'
+
 export {
   BreadcrumbProvider,
   useBreadcrumb,
@@ -6,13 +8,13 @@ export {
 } from './breadcrumb'
 export {
   ThemeProvider,
-  useToggleDark,
-  useTheme,
   useGetTheme,
-  useSetTheme
+  useInitTheme,
+  useSetTheme,
+  useTheme
 } from './theme'
 
-export function composeProviders(...providers) {
-  return ({ children }) =>
+export function composeProviders(...providers: IProvider[]) {
+  return ({ children }: { children: React.ReactNode }) =>
     providers.reduce((prev, Provider) => <Provider>{prev}</Provider>, children)
 }
