@@ -19,14 +19,10 @@
   "importOrder": [
     "^react",
     "<THIRD_PARTY_MODULES>",
-    "^@/components$",
-    "^@/hoc$",
-    "^@/hooks$",
-    "^@/provider$",
-    "^@/utils$",
+    "^@/",
     "api$",
     "./(types|interface).ts$",
-    ".(scss|less|css)$"
+    "^[.]"
   ],
   "importOrderSortSpecifiers": true
 }
